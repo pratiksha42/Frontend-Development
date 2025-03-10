@@ -1,0 +1,130 @@
+.Navbar_wrapper{
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    border: 1px solid #1e1e1e;
+    border-radius: 12px;
+    position: fixed;
+    top: 50px;
+    left: 5%;
+    box-shadow: 0 0 30px rgb(30, 30, 30, 0.18);
+    z-index: 999;
+    background-color: #fff;
+}
+
+.Navbar_wrapper .logo a{
+    font-size: 28px;
+    color: rgb(231, 76, 60);
+    font-weight: 800;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.Navbar_wrapper ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.Navbar_wrapper ul li a{
+    font-weight: 600;
+    color: #3d0909;
+    transition: 0.5s;
+}
+
+.Navbar_wrapper ul li a:hover{
+    color: rgb(231, 76, 60);
+}
+
+.Navbar_btns{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.Navbar_btns .search_wrapper{
+    width: 200px;
+    height: 38px;
+    display: flex;
+    position: relative;
+}
+
+.Navbar_btns .search_wrapper input{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 0, 0, 0.05);
+    padding: 0 30px;
+}
+
+.Navbar_btns .search_wrapper i{
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+#bars{
+    padding: 15px;
+    font-size: 18px;
+    color: #1e1e1e;
+    background-color: rgb(231, 76, 60);
+    cursor: pointer;
+    transition: .6s;
+    display: none;
+}
+
+#bars:hover{
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+@media screen and (max-width:1500px) {
+    #bars{
+        display: block;
+    }
+
+    .Navbar_wrapper ul{
+        position: absolute;
+        top: 125%;
+        left: 0;
+        background-color: #fff;
+        transition: 1s;
+        
+        width: 0%;
+        border-color: #1e1e1e;
+        border-style: solid;
+        border-width: 0px;
+        overflow: hidden;
+
+        border-radius: 12px;
+    }
+
+    .Navbar_wrapper ul li{
+        display: block;
+        margin: 15px 0;
+        padding: 8px 0;
+        padding-left: 8% !important;
+    }
+
+    .Navbar_wrapper .activeMenu{
+        border-width: 1px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .Navbar_btns .CallBtn{
+        display: none;
+    }
+}
+@media screen and (max-width:580px){
+    .Navbar_btns .search_wrapper{
+        display: none;
+    }
+}

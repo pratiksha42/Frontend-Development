@@ -1,0 +1,93 @@
+.trips_wrapper {
+    background-color: #f9f9fb;
+    padding: 80px 13% !important;
+    margin-top: 50px;
+  }
+  
+  .trips_wrapper h1{
+    font-size: 3rem;
+    color: #ff5a5f;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .cards .card {
+    width: 90%;
+    height: 480px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 0.8px solid rgba(131, 131, 131, 0.5);
+    transition: 0.6s;
+  }
+  
+  .cards .card:hover {
+    border-color: rgb(231, 76, 60);
+  }
+  
+  .cards .card img {
+    width: 100%;
+    height: 240px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .cards .card .TripContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    height: 50%;
+    padding: 20px;
+    padding-top: 15px;
+  }
+  
+  .rating i {
+    color: rgb(231, 76, 60);
+  }
+
+  .cards .card .TripContent h3{
+    font-size: 20px;
+  }
+  
+  .Pricing,
+  .TripDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Pricing .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(231, 76, 60);
+  }
+ 
+  @media screen and (max-width: 1400px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);}
+    .cards .card img {
+      height: 250px;}
+    .cards .card {
+      height: 500px;}
+  }
+  @media screen and (max-width: 768px) {
+      .cards {
+        grid-template-columns: repeat(1, 1fr);}
+      .cards .card img {
+        height: 280px;}
+      .cards .card {
+        height: 550px;}
+    }
+    
+  
